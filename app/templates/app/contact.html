@@ -1,0 +1,6 @@
+{% extends "app/base.html" %}
+
+{% block content %}
+<div hx-target="this" hx-trigger="load" hx-get="/hx/contact/{{ contact_num }}">
+</div>
+{% endblock %}
