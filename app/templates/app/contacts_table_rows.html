@@ -1,0 +1,8 @@
+{% for contact in contacts %}
+<tr class="{% if contact.active %}activate{% else %}deactivate{% endif %}">
+  <td><input type='checkbox' name='ids' value='{{ contact.id }}'></td>
+  <td>{{ contact.first_name }} {{ contact.last_name }}</td>
+  <td>{{ contact.email_address }}</td>
+  <td>{% if contact.active %}Active{% else %}Inactive{% endif %}</td>
+</tr>
+{% endfor %}
